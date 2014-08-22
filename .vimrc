@@ -1,0 +1,20 @@
+set nocompatible
+syntax on
+set backspace=2
+set laststatus=2
+set shiftwidth=2
+set softtabstop=4
+set tabstop=8
+set expandtab
+set smarttab
+set autoindent
+filetype plugin indent on
+set wrap
+set textwidth=79
+set colorcolumn=+1
+set relativenumber
+set number
+set cursorline
+set list
+set listchars=eol:¬,tab:>-
+colorscheme desert
