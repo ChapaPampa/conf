@@ -3,6 +3,7 @@
 zstyle ':completion:*' completer _expand _complete _ignored _correct _approximate
 zstyle ':completion:*' expand prefix suffix
 zstyle ':completion:*' list-colors ''
+zstyle ':completion:*' rehash true
 zstyle ':completion:*' list-suffixes true
 zstyle ':completion:*' matcher-list '' 'm:{[:lower:]}={[:upper:]}' 'r:|[._-/]=** r:|=**' 'l:|=* r:|=*'
 zstyle ':completion:*' max-errors 3 numeric
@@ -17,6 +18,7 @@ compinit
 
 # by néco
 
+export TERM=rxvt-unicode-256color
 export CC=gcc
 export CXX=g++
 export LANG=en_US.UTF-8
@@ -32,10 +34,10 @@ export LSCOLORS="ExGxFxdxCxDxDxhbadExEx"
 #alias reboot='/sbin/shutdown -r now'
 #alias poweroff='/sbin/shutdown -p now'
 alias logout='killall i3'
-alias reboot='sudo reboot'
+alias reboot='sudo shutdown -r now'
 alias poweroff='sudo shutdown -h now'
 
-alias ls='ls'
+alias ls='ls --color=auto'
 alias ll='ls -l'
 #alias l='ll'
 alias la='ls -a'
@@ -43,17 +45,17 @@ alias lla='ls -la'
 alias emacs='emacs -nw'
 alias reload="source ~/.zshrc"
 alias c='clear'
-alias autoheader="~/./autoheader.sh"
 alias setxusi='setxkbmap us -variant alt-intl'
 alias setxus='setxkbmap us'
 alias v='vim'
+alias rsn='redshift -O 5000'
+alias rsd='redshift -O 6500'
 
 autoload -U colors && colors
 
 PROMPT="%(!.%F{red}%B.%F{green}Chapa Pampa) %F{blue}[%~]%f%#%f%b "
 RPROMPT='%F{red}%T%f%f'
 setopt nopromptcr
-#setopt autocd
 
 bindkey -e
 bindkey '^W' vi-backward-kill-word
@@ -64,10 +66,4 @@ bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
 bindkey '[D' emacs-backward-word
 bindkey '[C' emacs-forward-word
-#alias z='metalock'
 #alias valgrind = 'valgrind --tool=memcheck --leak-check=yes --show-reachable=yes'
-
-export NNTPSERVER="news.epita.fr"
-
-setxkbmap -option caps:swapescape
-eval $(cat ~/.fehbg)

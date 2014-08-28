@@ -1,0 +1,19 @@
+[user]
+  name = Etienne BROUZES
+  email = etienne.brouzes@epita.fr
+[alias]
+  st = status
+  gcat = cat-file -p
+  graph = log --graph --pretty=oneline
+  all = log --graph --pretty=oneline --all
+  tree = !git ls-files | .treeify.py
+[color]
+  ui = true
+[log]
+  decorate = full
+[help]
+  autocorrect = 1
+[push]
+  default = simple
+[merge]
+  tool = meld
