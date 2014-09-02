@@ -33,7 +33,6 @@ export LSCOLORS="ExGxFxdxCxDxDxhbadExEx"
 
 #alias reboot='/sbin/shutdown -r now'
 #alias poweroff='/sbin/shutdown -p now'
-alias logout='killall i3'
 alias reboot='sudo shutdown -r now'
 alias poweroff='sudo shutdown -h now'
 
