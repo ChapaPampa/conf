@@ -49,7 +49,7 @@ set wrap
 set cursorline
 set scrolloff=6
 set list
-set listchars=eol:¬,tab:>-
+set listchars=eol:¬,tab:>-,trail:-,nbsp:_
 
 set backspace=2
 
