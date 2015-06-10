@@ -3,4 +3,4 @@
 # ~/.xinitrc
 
 eval $(cat ~/.fehbg)                # sets the background image
-setxkbmap -option caps:swapescape
+setxkbmap -option caps:escape
