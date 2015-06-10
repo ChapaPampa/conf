@@ -1,6 +1,9 @@
 [user]
   name = Etienne BROUZES
   email = etienne.brouzes@epita.fr
+[core]
+  editor = vim
+  excludesfile = ~/.gitignore
 [alias]
   st = status
   gcat = cat-file -p
