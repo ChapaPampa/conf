@@ -42,6 +42,9 @@ augroup END
 "    silent !mkdir -p ~/.vimtmp/undo
 "endif
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set wrap
+set textwidth=79
+set colorcolumn=+1
 
 syntax on
 set showmatch

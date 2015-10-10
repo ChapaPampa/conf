@@ -22,7 +22,7 @@ export TERM=rxvt-unicode-256color
 export CC=gcc
 export CXX=g++
 export LANG=en_US.UTF-8
-export PAGER="less"
+export PAGER="most"
 export EDITOR="vim"
 
 setopt appendhistory extended_glob HIST_IGNORE_ALL_DUPS HIST_SAVE_NO_DUPS sh_word_split
@@ -41,6 +41,7 @@ alias ll='ls -l'
 #alias l='ll'
 alias la='ls -a'
 alias lla='ls -la'
+alias cd..='cd ..'
 alias emacs='emacs -nw'
 alias reload="source ~/.zshrc"
 alias c='clear'
