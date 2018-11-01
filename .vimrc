@@ -13,9 +13,11 @@ set statusline=%f\ %m%=%y\ %p%%\ %l:%c
 "set wildmenu
 
 set tabstop=8
-set softtabstop=4
+" COMMENT 3 NEXT LINE FOR STOS CODING STYLE
+set softtabstop=2
 set shiftwidth=2
 set expandtab
+
 set smarttab
 set autoindent
 
@@ -42,7 +44,7 @@ augroup END
 "    silent !mkdir -p ~/.vimtmp/undo
 "endif
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set wrap
+"set wrap
 set textwidth=79
 set colorcolumn=+1
 

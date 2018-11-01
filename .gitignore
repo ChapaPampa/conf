@@ -1,2 +1,8 @@
+.gitignore
 *.swp
+*.swo
 *.o
+*.a
+*.exe
+*.dll
+*.lib

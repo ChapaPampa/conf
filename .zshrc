@@ -19,7 +19,7 @@ compinit
 # by néco
 
 export TERM=rxvt-unicode-256color
-export CC=gcc
+#export CC=gcc
 export CXX=g++
 export LANG=en_US.UTF-8
 export PAGER="most"
@@ -33,8 +33,10 @@ export LSCOLORS="ExGxFxdxCxDxDxhbadExEx"
 
 #alias reboot='/sbin/shutdown -r now'
 #alias poweroff='/sbin/shutdown -p now'
-alias reboot='sudo shutdown -r now'
-alias poweroff='sudo shutdown -h now'
+alias reboot='shutdown -r now'
+alias poweroff='shutdown -h now'
+alias lock='i3lock -c 000000 -i ~/.img/lock.png'
+alias hibernate='lock & systemctl suspend'
 
 alias ls='ls --color=auto'
 alias ll='ls -l'
@@ -50,6 +52,16 @@ alias setxus='setxkbmap us'
 alias v='vim'
 alias rsn='redshift -O 5000'
 alias rsd='redshift -O 6500'
+alias git-patch="git format-patch -v7 --subject-prefix='PATCH k3' HEAD~5"
+alias git-mail="git send-email --to='stos-1@lse.epita.fr' --in-reply-to='<1458682347-24015-5-git-send-email-etienne.brouzes@epita.fr>'"
+alias jogsoul="~/.jogsoul.pl ~/.jogsoul.conf"
+alias copy-buff="xclip -selection clipboard"
+
+#historique
+HISTFILE=~/.history
+HISTSIZE=1000
+SAVEHIST=1000
+export HISTFILE SAVEHIST
 
 autoload -U colors && colors
 
@@ -67,3 +79,6 @@ bindkey "^[[1;5D" backward-word
 bindkey '[D' emacs-backward-word
 bindkey '[C' emacs-forward-word
 #alias valgrind = 'valgrind --tool=memcheck --leak-check=yes --show-reachable=yes'
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+export PATH="$PATH:$HOME/project/robo/MATLAB/bin"

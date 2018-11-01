@@ -1,6 +1,6 @@
 [user]
-  name = ChapaPampa
-  email = maitre_pacha@hotmail.com
+  name = Etienne Brouzes
+  email = etienne.brouzes@epita.fr
 [core]
   editor = vim
   excludesfile = ~/.gitignore
@@ -18,5 +18,7 @@
   autocorrect = 1
 [push]
   default = simple
+[pull]
+  rebase = true
 [merge]
   tool = meld
