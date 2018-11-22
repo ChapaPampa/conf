@@ -10,6 +10,7 @@ zstyle ':completion:*' max-errors 3 numeric
 zstyle ':completion:*' menu select=1
 zstyle ':completion:*' preserve-prefix '//[^/]##/'
 zstyle ':completion:*' select-prompt %SScrolling active: current selection at %p%s
+#zstyle ':completion:*' fake-files /: '/:c f'
 zstyle :compinstall filename '/root/.zshrc'
 
 autoload -Uz compinit
@@ -47,14 +48,14 @@ alias cd..='cd ..'
 alias emacs='emacs -nw'
 alias reload="source ~/.zshrc"
 alias c='clear'
-alias setxusi='setxkbmap us -variant alt-intl'
-alias setxus='setxkbmap us'
+#alias setxusi='setxkbmap us -variant alt-intl'
+#alias setxus='setxkbmap us'
 alias v='vim'
 alias rsn='redshift -O 5000'
 alias rsd='redshift -O 6500'
-alias git-patch="git format-patch -v7 --subject-prefix='PATCH k3' HEAD~5"
-alias git-mail="git send-email --to='stos-1@lse.epita.fr' --in-reply-to='<1458682347-24015-5-git-send-email-etienne.brouzes@epita.fr>'"
-alias jogsoul="~/.jogsoul.pl ~/.jogsoul.conf"
+#alias git-patch="git format-patch -v7 --subject-prefix='PATCH k3' HEAD~5"
+#alias git-mail="git send-email --to='stos-1@lse.epita.fr' --in-reply-to='<1458682347-24015-5-git-send-email-etienne.brouzes@epita.fr>'"
+#alias jogsoul="~/.jogsoul.pl ~/.jogsoul.conf"
 alias copy-buff="xclip -selection clipboard"
 
 #historique
@@ -65,7 +66,10 @@ export HISTFILE SAVEHIST
 
 autoload -U colors && colors
 
-PROMPT="%(!.%F{red}%B.%F{green}Chapa Pampa) %F{blue}[%~]%f%#%f%b "
+source ~/.git-prompt.sh
+#PROMPT="%(!.%F{red}%B.%F{green}Chapa Pampa) %F{blue}[%~]%f%#%f%b "
+setopt prompt_subst
+PROMPT="%(!.%B.%F{green}Chapa Pampa) %F{blue}[%~]%F{red}\$(__git_ps1) %f%#%f%b "
 RPROMPT='%F{red}%T%f%f'
 setopt nopromptcr
 
