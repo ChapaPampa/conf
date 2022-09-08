@@ -20,5 +20,7 @@
   default = simple
 [pull]
   rebase = true
+[rebase]
+  autostash = true
 [merge]
   tool = meld
